@@ -1,17 +1,25 @@
 import Vue from 'vue'
+import './plugins/axios'
+import './plugins/fontawesome'
 import App from './App.vue'
-import "vue-awesome/icons/index.js";
-import Icon from "vue-awesome/components/Icon";
-import router from './router';
-import store from './store';
+import router from './routes'
+import store from './store'
+import './plugins/element.js'
+import 'particles.js';
 
-
-Vue.component('icon', Icon);
 Vue.config.productionTip = false
-
+Vue.use(require('vue-wechat-title'))
 
 new Vue({
-  render: h => h(App),
   router,
-  store
+  store,
+  render: h => h(App)
 }).$mount('#app')
+
+window.axios
+  .get("https://langnang.github.io/src/json/particles.js/index.json")
+  .then(res => {
+    if (res.status === 200) {
+      window.particlesJS('app', res.data);
+    }
+  })

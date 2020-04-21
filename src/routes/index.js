@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import HomeRoute from './routes/home.vue'
-import ErrorRoute from './routes/error.vue'
-import DynamicRoute from './routes/dynamic.vue';
+import HomeRoute from './../views/home.vue'
+import ErrorRoute from './../views/error.vue'
+import DynamicRoute from './../views/dynamic.vue';
 
-import VueAwesomeRoute from './routes/vue-awesome.vue';
+import VueAwesomeRoute from './../views/vue-awesome.vue';
 
 
 Vue.use(VueRouter);

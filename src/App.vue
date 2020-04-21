@@ -26,4 +26,10 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 </style>
