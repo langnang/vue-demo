@@ -10,7 +10,7 @@ module.exports = {
         config
             .plugin('html')
             .tap(args => {
-                args[0].title = 'Vue Demo'
+                args[0].title = 'Vue Demo'// 自定义标题
                 return args
             })
     }
