@@ -1,9 +1,11 @@
 {
-  "name": "vue-demo",
-  "version": "0.0.1",
-  "private": true,
+  "name": "vue-template",
+  "description": "Vue template",
+  "version": "0.1.0",
+  "homepage": "https://github.com/langnang/vue-template#readme",
+  "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -56,8 +58,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "description": "",
-  "main": "babel.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/langnang/vue-template.git"
@@ -71,6 +71,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/langnang/vue-template/issues"
-  },
-  "homepage": "https://github.com/langnang/vue-template#readme"
+  }
 }
