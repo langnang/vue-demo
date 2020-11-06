@@ -2,13 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./routes";
 import store from "./store";
+import particlesData from "./particles.json";
 import "./plugins/axios";
 import "./plugins/element";
 import "./plugins/fontawesome";
 import "./plugins/vue-wechat-title";
 import "particles.js";
-
-import particlesData from "./particles.json";
 
 Vue.config.productionTip = false;
 
