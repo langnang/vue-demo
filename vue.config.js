@@ -3,6 +3,14 @@ module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/vue-template/" : "/",
   devServer: {
     port: 9100, // 自定义端口
+    proxy: {
+      "/github": {
+        target: "https://api.github.com/",
+        pathRewrite: {
+          "^/github": "",
+        },
+      },
+    },
   },
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
