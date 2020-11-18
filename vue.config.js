@@ -1,8 +1,14 @@
 module.exports = {
-  outputDir: "dist",
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-template/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-template/" : "/", // 部署应用包时的基本 URL
+  outputDir: "dist", // 生成的生产环境构建文件的目录
+  // assetsDir: "", // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
+  // indexPath: "index.html", // 指定生成的 index.html 的输出路径
+  // filenameHashing: true, // 文件名哈希
+  // pages: {}, // 在 multi-page 模式下构建应用
+  // 所有 webpack-dev-server 的选项都支持
   devServer: {
     port: 9100, // 自定义端口
+    // 将 API 请求代理到 API 服务器
     proxy: {
       "/github": {
         target: "https://api.github.com/",
