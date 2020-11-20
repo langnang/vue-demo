@@ -1,6 +1,10 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-template/" : "/", // 部署应用包时的基本 URL
-  outputDir: "dist", // 生成的生产环境构建文件的目录
+  // 部署应用包时的基本 URL
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-template/" : "/",
+
+  // 生成的生产环境构建文件的目录
+  outputDir: "dist",
+
   // assetsDir: "", // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
   // indexPath: "index.html", // 指定生成的 index.html 的输出路径
   // filenameHashing: true, // 文件名哈希
@@ -18,10 +22,20 @@ module.exports = {
       },
     },
   },
+
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
       args[0].title = "Vue Template"; // 自定义标题
       return args;
     });
+  },
+
+  pluginOptions: {
+    i18n: {
+      locale: "zh-CN",
+      fallbackLocale: "zh-CN",
+      localeDir: "locales",
+      enableInSFC: false,
+    },
   },
 };
